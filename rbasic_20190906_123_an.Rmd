@@ -1,0 +1,113 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+a <- 1
+b <- 1
+c <- -1
+a
+print(a)
+ls()
+(-b + sqrt(b^2 - 4*a*c)) / (2*a)
+(-b - sqrt(b^2 - 4*a*c)) / (2*a)
+log(8)
+log(a)
+help("log")
+?log
+args(log)
+log(8, base = 2)
+log(x = 8, base = 2)
+log(8, 2)
+log(base = 2, 8)
+2^3
+help("+")
+?"+"
+help(">")
+?">"
+data()
+co2
+pi
+Inf+1
+##code to compute solution to quadratic equation of the form ax^2 + bx + c
+##define the variables 
+a <- 3
+b <- 2
+c <- -1
+##now compute the solution 
+(-b - sqrt(b^2 - 4*a*c)) / (2*a)
+(-b + sqrt(b^2 - 4*a*c)) / (2*a)
+##exercise 3.3
+n <- 100 
+n
+n = 100
+n (n + 1) / 2
+n + 1
+(n (n + 1) / 2)
+n <- 1000
+x <- seq(1, n)
+sum(x)
+##B, seq creates a list of numbers through sequencing and then sum adds them. 
+log(10^x)
+log10(sqrt(100))
+a <- 2
+class(a)
+library(dslabs)
+data(murders)
+class(murders)
+str(murders)
+head(murders)
+murders$population
+names(murders)
+murders$p
+pop <- murders$population
+length (pop)
+class(pop)
+class(murders$state)
+z <- 3 == 2
+z
+class(z)
+??comparison
+class(murders$region)
+levels(murders$region)
+region <- murders$region
+value <- murders$total
+region <- reorder(region, value, FUN = sum)
+levels(region)
+mat <- matrix(1:12, 4, 3)
+mat
+mat[2,3]
+mat[2, ]
+mat[ ,3]
+mat[, 2:3]
+mat[1:2, 2:3]
+as.data.frame(mat)
+data("murders")
+murders[25,1]
+murders[2:3, ]
+##3.6 exercises
+str(murders)
+##B, The state name, the abbreviation of the state name, the state’s region, and the state’s population and total number of murders for 2010.
+str(murders$a)
+?identical
+str(murders)[[b]]
+identical(a,b)
+class(murders$region)
+levels(murders$region)
+length(murders$region)
+table(murders$region)
+levels(murders)
+length(murders)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
